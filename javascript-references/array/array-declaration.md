@@ -14,13 +14,18 @@
 ### Literal notation [ ]
 The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred.
 
+#### Syntax:
 ```javascript
 [element1, /* …, */ elementN]
 ```
+
+#### Parameters:
 - `element1`,/* …, */ `elementN`: (optional) Any number of elements regardless of type.
 
-#### Example: Using `literal notation []`
+#### Return:
+- A new `Array` instance with specified elements from the arguments.
 
+#### Example:
 ```javascript
 // Create an empty array
 const literal_array_1 = [];
@@ -33,17 +38,23 @@ console.log(literal_array_2) // -> [1,2,3,4]
 ```
 
 ### new Array()
-
 The `new Array()` uses the constructor to create a new array with specified paramenters. It can be used with or without the `new` declaration.
 
+#### Syntax:
 ```javascript
 new Array(element1, /* …, */ elementN)
 new Array(arrayLength)
 ```
+
+#### Parameters:
 - `element1`,/* …, */ `elementN`: (optional) Any number of elements regardless of type. <br>
 - `arrayLength`: (optional) Single integer numeric value.
 
-#### Example: Using `new Array()`
+#### Return:
+- A new `Array` instance with specified elements from the arguments.
+- <b>OR</b> a new `Array` instance with specified `length` and `empty` values.
+
+#### Example:
 ```javascript
 // Create an empty array
 const new_array_1 = new Array();
@@ -60,10 +71,10 @@ console.log(new_array_3); // -> [1,2,3,4]
 ```
 
 #### ☝️ Heads up!
-
 The first parameter of `Array()` constructor can be interpreted in two ways: As a value to initialize the array, or as the length to create the array. If the there is only one numeric paramenter in constructor, it will assume as the new Array length, creating an empty array with specified lenght.
 
 In this case, it's best to use the `literal notation []` or `Array.of()` to create the numeric array with single numeric element.
+
 ```javascript
 // Create an empty array with initial length of 3
 const new_array_3 = new Array(3);
@@ -73,16 +84,20 @@ console.log(new_array_3.length); // -> 3
 ```
 
 ### Array.of()
-
 The `Array.of()` method creates a new array from any number of arguments. It works mostly like `new Array()`, but it always treats its arguments as elements to create a new array, even a single number.
 
+#### Syntax:
 ```javascript
 Array.of(element1, /* …, */ elementN)
 ```
+
+#### Parameters:
 - `element1`,/* …, */ `elementN`: (optional) Any number of elements regardless of type.
 
-#### Example: Using `Array.of()`
+#### Return:
+- A new `Array` instance with specified elements from the arguments.
 
+#### Example:
 ```javascript
 // Create an empty array
 const array_of_1 = Array.of();
@@ -119,18 +134,22 @@ console.log(array_of_34); // -> [1,2,3,4]
 ```
 
 ### Array.from()
-
 The `Array.from()` method returns an <b>shallow copy</b> array from any <b>object with a length</b> property. It allows to use a "map" function to iterate de object and generate the new array. Moslty used to convert iterable objects (`Map`, `Set`) and `array-like` objects to arrays.
 
+#### Syntax:
 ```javascript
 Array.from(object, mapFunction, thisValue)
 ```
+
+#### Parameters:
 - `object`: (required) The object to convert to an array. <br>
 - `mapFunction`: (optional) A map function to call on each item. <br>
 - `thisValue`: (optional) A value to use as `this` for the mapFunction.
 
-#### Example: Sequence generation using `Array.from()`
+#### Return:
+- A new `Array` instance shallow coppied from iterable elements in arguments.
 
+#### Example:
 ```javascript
 // Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
 const range = (start, stop, step) =>
