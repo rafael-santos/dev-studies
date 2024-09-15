@@ -30,15 +30,22 @@ Array of uses the constructor to create a new array with specified paramenters.
 // Create an empty array
 const new_array_1 = new Array();
 
+// Create an array with string "abc"
+const new_array_2 = new Array("abc");
+
 // Create an array with initial values 1, 2, 3 and 4
-const new_array_2 = new Array(1,2,3,4);
+const new_array_3 = new Array(1,2,3,4);
 
 console.log(new_array_1); // -> []
-console.log(new_array_2); // -> [1,2,3,4]
+console.log(new_array_2); // -> ["abc"]
+console.log(new_array_3); // -> [1,2,3,4]
 ```
 
-> ⚠️ Careful
+<b>☝️ Heads up!</b>
 
+The first parameter of Array() constructor can be interpreted in two ways: As a value to initialize the array, or as the length to create the array. If the there is only one numeric paramenter in constructor, it will assume as the new Array length, creating an empty array with specified lenght.
+
+In this case, it's best to use the `literal notation` or `Array.of()` to create the numeric array with single element.
 ```javascript
 // Create an empty array with initial length of 3
 const new_array_3 = new Array(3);
