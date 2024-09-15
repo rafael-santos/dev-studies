@@ -62,7 +62,6 @@ console.log(new_array_3); // -> [1,2,3,4]
 #### ☝️ Heads up!
 
 The first parameter of `Array()` constructor can be interpreted in two ways: As a value to initialize the array, or as the length to create the array. If the there is only one numeric paramenter in constructor, it will assume as the new Array length, creating an empty array with specified lenght.
-The first parameter of `Array()` constructor can be interpreted in two ways: As a value to initialize the array, or as the length to create the array. If the there is only one numeric paramenter in constructor, it will assume as the new Array length, creating an empty array with specified lenght.
 
 In this case, it's best to use the `literal notation []` or `Array.of()` to create the numeric array with single numeric element.
 ```javascript
@@ -120,8 +119,6 @@ console.log(array_of_34); // -> [1,2,3,4]
 ```
 
 ### Array.from()
-
-The `Array.from()` method returns an <b>shallow copy</b> array from any <b>object with a length</b> property. It allows to use a "map" function to iterate de object and generate the new array. Moslty used to convert iterable objects (`Map`, `Set`) and `array-like` objects to arrays.
 
 The `Array.from()` method returns an <b>shallow copy</b> array from any <b>object with a length</b> property. It allows to use a "map" function to iterate de object and generate the new array. Moslty used to convert iterable objects (`Map`, `Set`) and `array-like` objects to arrays.
 
