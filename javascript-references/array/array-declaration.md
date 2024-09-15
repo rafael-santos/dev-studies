@@ -2,11 +2,11 @@
 
 | Name | Description | JS Version |
 | - | - | :-: |
-| [[ ]](#) | Creates a new Array | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
-| [new Array()](#) | Creates a new Array | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
-| [of()](#) | Creates an array from a number of arguments | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
-| [from()](#) | Creates an array from an object | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
-| [fill()](#) | Fill the elements in an array with a static value | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
+| [[ ]](/javascript-references/array/array-declaration.md#literal-notation--) | Creates a new Array | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
+| [new Array()](/javascript-references/array/array-declaration.md#new-array) | Creates a new Array | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
+| [of()](/javascript-references/array/array-declaration.md#arrayof) | Creates an array from a number of arguments | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
+| [from()](/javascript-references/array/array-declaration.md#arrayfrom) | Creates an array from an object | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
+| [fill()](/javascript-references/array/array-declaration.md#arrayfill) | Fill the elements in an array with a static value | ![Static Badge](https://img.shields.io/badge/ES1%20(1997)-f5f5f5) |
 
 ### Literal notation [ ]
 The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred.
