@@ -151,6 +151,13 @@ Array.from(object, mapFunction, thisValue)
 
 #### Example:
 ```javascript
+// Generate a sequence of numbers
+// Since the array is initialized with `undefined` on each position,
+// the value of `v` below will be `undefined`
+Array.from({ length: 5 }, (v, i) => i);
+// [0, 1, 2, 3, 4]
+```
+```javascript
 // Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
 const range = (start, stop, step) =>
   Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
