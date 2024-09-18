@@ -46,7 +46,7 @@
   </table>
 </p>
 
-### What it is?
+## What it is?
 
 The Big O notation is a commonly used way to determine the complexity of an algorithm and predict how it's execution time or memoy consumption scales as it's input size grows. It is alwso know as Space Complexity, Time Complexity or Algorith Efficiency.
 
@@ -62,7 +62,7 @@ For this reason, the Big O notation cares about the Order of Magnitude of how ma
   <img src="https://github.com/user-attachments/assets/430dde04-d289-4bfb-aa61-6359b8aa078e"/>
 </p>
 
-### Why it's important?
+## Why it's important?
 
 The big O notation helps you understant how your system or program will behave as it scales.
 
@@ -71,7 +71,7 @@ affect your system uptime, reliability and performance under heavy load stress.
 
 It's important to understand it so you can save money and predict if you solution will scale as your problem grows, or fall apart and you don't know why.
 
-#### A naive example:
+### A naive example:
 
 Let's say you have an hypothetical system that handles 1,000 users and have 16gb RAM. Under heavy load, it uses about 8gb RAM, so there is space to almost double your users, right?
 
@@ -87,13 +87,15 @@ More important than that, is to know how to fix this problem with a better solut
 
 The table bellow illustrates the difference in aproaching the problem by solving the complexity issue vs. just scaling RAM.
 
+<p align="center">
+
 | Number<br>of users | RAM needed with<br>complexity N<sup>2</sup> | vs | RAM needed with<br>complexity N*logN |
 |:------------------:|:---------------------------------:|:--:|:------------------------------------:|
 |                500 |                2gb                |    |                 36mb                 |
 |              1,000 |                8gb                |    |                 80mb                 |
 |              1,500 |                16gb               |    |                 126mb                |
 |              2,000 |                32gb               |    |                 175mb                |
-
+</p>
 <details>
   <summary>See table calculations</summary>
 
