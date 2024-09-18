@@ -1,5 +1,51 @@
 # Big O Notation
 
+<p align="center">
+  <table><thead>
+    <tr>
+      <th>Complexity chart representation</th>
+      <th>Notation</th>
+      <th>Name</th>
+    </tr></thead>
+  <tbody>
+    <tr>
+      <td rowspan="7">
+        <img src="https://github.com/user-attachments/assets/dd1acbc8-3ef7-49e0-bd74-4db958ccc57d" alt="Big-O complexity chart from bigocheatsheet.com" width="400" height="250">
+        <p align="center">
+          <sub>Image from https://www.bigocheatsheet.com/</sub>
+        </p>
+        </td>
+      <td>O(1)</td>
+      <td><a href="/big-o-notation#o1---constant-complexity">Constant complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(log n)</td>
+      <td><a href="/big-o-notation#olog-n---logarithmic-complexity">Logarithmic complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(n)</td>
+      <td><a href="/big-o-notation#on---linear-complexity">Linear complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(n log n)</td>
+      <td><a href="/big-o-notation#on-log-n---log-linear-complexity">Log Linear complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(n<sup>2</sup>)</td>
+      <td><a href="/big-o-notation#on2---quadratic-complexity">Quadratic complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(2<sup>n</sup>)</td>
+      <td><a href="/big-o-notation#o2n---exponential-complexity">Exponential complexity</a></td>
+    </tr>
+    <tr>
+      <td>O(n!)</td>
+      <td><a href="big-o-notation#on---factorial-complexity">Factorial complexity</a></td>
+    </tr>
+  </tbody>
+  </table>
+</p>
+
 ### What it is?
 
 The Big O notation is a commonly used way to determine the complexity of an algorithm and predict how it's execution time or memoy consumption scales as it's input size grows. It is alwso know as Space Complexity, Time Complexity or Algorith Efficiency.
@@ -12,7 +58,9 @@ The same algorithm could run in "real time measurement" faster or slower on diff
 
 For this reason, the Big O notation cares about the Order of Magnitude of how many steps are executed -- or how much memory is alocated -- by the algorithm as it's input grows. This way it becomes independete of the machine or hardware differences, in fact, we don't need to execute the code at all to get it's complexity mesurement. The same could not be achieved if we wanted a real measurement.
 
-\>>>>>>>>>>>>>>>>>> [Gráfico comparando mesma complexidade em computadores diferentes] <<<<<<<<<<<<<<<<<<
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/430dde04-d289-4bfb-aa61-6359b8aa078e"/>
+</p>
 
 ### Why it's important?
 
@@ -86,7 +134,7 @@ With the same 8gb RAM we needed for 1k users, we could support over 100k users a
 
 Now that we understand the importance of knowing the Big O notation, let's break it down so we can learn how to thinkin in its abstract way, evaluate an algorithm and identify its complexity.
 
-### Concept
+### Basic concept
 
 ### How to analyse complexity
 
@@ -104,9 +152,9 @@ Now that we understand the importance of knowing the Big O notation, let's break
 
 ### O(n log n) - Log Linear complexity
 
-### O(n^2) - Quadratic complexity
+### O(n<sup>2</sup>) - Quadratic complexity
 
-### O(2^n) - Exponential complexity
+### O(2<sup>n</sup>) - Exponential complexity
 
 ### O(n!) - Factorial complexity
 
@@ -117,6 +165,7 @@ Now that we understand the importance of knowing the Big O notation, let's break
 - [Youtube: Bro Code - Learn Big O notation in 6 minutes](https://www.youtube.com/watch?v=XMUe3zFhM5c)
 - [Youtube: NeetCode - Big-O Notation - For Coding Interviews](https://www.youtube.com/watch?v=BgLTDT03QtU)
 - [Github: EduardoPires/big-o-notation](https://github.com/EduardoPires/big-o-notation)
+- [Site: Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
 
 
 <br>
