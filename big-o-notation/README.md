@@ -2,29 +2,26 @@
 
 ### What it is?
 
-The Big O notation is a commonly used way to determine the complexity of an algorithm and predict how it's execution time or memoy consumption scales as it's input size grows.
-
-It is alwo know as Space complexity, Time complexity or Algorith efficiency.
+The Big O notation is a commonly used way to determine the complexity of an algorithm and predict how it's execution time or memoy consumption scales as it's input size grows. It is alwso know as Space Complexity, Time Complexity or Algorith Efficiency.
 
 We may think mesuring time and space complexity in real units like minutes, seconds, inches, meters; but the Big O notation uses an abstract way to describe this mesures.
 
 Abstract because it's not about mesuring the real time/cost, but an abstraction of it that allow us to focus on the algorith performance, disregarding execution conditions, hardware capabilities, network, etc. which could influence real time/cost mesurement.
 
-The same algorithm could run in "real time measurement" faster or slower on different computers, but the growth rate of this execution time is equivalent in both of them, because it's a factor of the algorithm itself, not of the conditions it was executed on.
+The same algorithm could run in "real time measurement" faster or slower on different computers, but the growth rate of execution time is equivalent in both of them, because it's a factor of the algorithm itself, not of the conditions it was executed on.
 
-For this reason, the Big O notation cares about the Order of Magnitude of how many steps are executed -- or how much memory is alocated -- by the algorithm as it's input grows. This way it becomes independete of the machine or hardware differences, in fact, we don't need to execute the code at all to get it's complexity mesurement. The same could not be achievet if we wanted a real measurement.
+For this reason, the Big O notation cares about the Order of Magnitude of how many steps are executed -- or how much memory is alocated -- by the algorithm as it's input grows. This way it becomes independete of the machine or hardware differences, in fact, we don't need to execute the code at all to get it's complexity mesurement. The same could not be achieved if we wanted a real measurement.
 
 \>>>>>>>>>>>>>>>>>> [Gráfico comparando mesma complexidade em computadores diferentes] <<<<<<<<<<<<<<<<<<
-
 
 ### Why it's important?
 
 The big O notation helps you understant how your system or program will behave as it scales.
 
 Not only time, memory and computational power cost money when you need to scale your application, but it also
-affect your system uptime, performance in heavy load stress and reliability.
+affect your system uptime, reliability and performance under heavy load stress.
 
-It's important to understand it so you can save money and predict if you solution will scale as your problem grows, or it will fall apart and you don't know why.
+It's important to understand it so you can save money and predict if you solution will scale as your problem grows, or fall apart and you don't know why.
 
 #### A naive example:
 
@@ -32,32 +29,60 @@ Let's say you have an hypothetical system that handles 1,000 users and have 16gb
 
 Some day you reach 1,500 users, and even under normal load circumstances, your application suffers down times and slowness. You then decide to end it for good, going from a 16gb RAM to an 32gb RAM plan.
 
-It works. It costs more money, but you are happy because everything works and you are prepeared to grown even more, after all, you have "4 times more" RAM than you need to support a thousan users under heavy load.
+It works. It costs more money, but you are happy because everything works and you have already prepeared to grown even more in the future, after all, you have "4 times more" RAM than you need to support a thousan users under heavy load.
 
-Time passes and everyting is great, you have 2,000 users now! But things start being unreliable again...
-
-What's wrong? You have doubled your RAM, there are only 500 more users, and yet you are hitting memory capacity again.
+Time passes and everyting is great, you have 2,000 users now! But things start being unreliable again... What's wrong? You have doubled your RAM, there are only 500 more users, and yet you are hitting memory capacity again.
 
 Well, the thing missing here is taking in consideration your system complexity. In this example, I used an quadradic complexity to show the imortance of understanding how your solution scales.
 
 More important than that, is to know how to fix this problem with a better solution, like addressing the complexity issue, insted of paying higher an higher prices to support more users.
 
-The table bellow illustrates the difference in aproaching the problem by solving the complexity issue versus just scaling RAM.
+The table bellow illustrates the difference in aproaching the problem by solving the complexity issue vs. just scaling RAM.
 
-| Number<br>of users | RAM needed with<br>complexity N^2 |   |   |  X |   |   | RAM needed with<br>complexity N*logN |
-|:------------------:|:---------------------------------:|---|---|:--:|---|---|:------------------------------------:|
-|                500 |                2gb                |   |   | \| |   |   |                 36mb                 |
-|              1,000 |                8gb                |   |   | \| |   |   |                 80mb                 |
-|              1,500 |                16gb               |   |   | \| |   |   |                 126mb                |
-|              2,000 |                32gb               |   |   | \| |   |   |                 175mb                |
+| Number<br>of users | RAM needed with<br>complexity N<sup>2</sup> | vs | RAM needed with<br>complexity N*logN |
+|:------------------:|:---------------------------------:|:--:|:------------------------------------:|
+|                500 |                2gb                |    |                 36mb                 |
+|              1,000 |                8gb                |    |                 80mb                 |
+|              1,500 |                16gb               |    |                 126mb                |
+|              2,000 |                32gb               |    |                 175mb                |
 
-\>>>>>>>>>>>>>>>>>> [insert math calculations] <<<<<<<<<<<<<<<<<<
+<details>
+  <summary>See table calculations</summary>
 
-As we can see, by knowing we have a quadradic complexity (N^2), it's easy to predict that scaling RAM in our problem is not a permanent solution. On the other hand, reducing the system complexity to N*logN would have a HUGE impact on scaling our system.
+  - The base information:
+    - We need 8gb of RAM to handle 1,000 users.
+    - Our system runs with N<sup>2</sup> complexity
+    - Our N is the number of users
+    - N<sup>2</sup> = 1000<sup>2</sup> = 1,000,000 = 8gb
 
-With the same 8gb RAM we needed for 1,000 users, we could support over 100,000 users and still have 8gb RAM free with no extra cost. To support this same amount of users just by scaling RAM, we would need 80,000 gb RAM! Can you pay for that?
+  - Scaling RAM with N<sup>2</sup> complexity
+    - We know 1,000,000 represents 8gb RAM
+    - So we can say 1,000,000/8 = 125,000 = 1gb
+    - Then we can calculate the N<sup>2</sup> for any number of users
+      - 500<sup>2</sup> = 250,000 = 2gb
+      - 1,500<sup>2</sup> = 2,250,000 = 18gb
+      - 2,000<sup>2</sup> = 4,000,000 = 32gb
 
-## Basics
+  - Scaling RAM with N*logN complexity
+    - Calculating N*logN for any number of users
+      - 500 * log<sub>2</sub> (500) = 4,482
+      - 1000 * log<sub>2</sub> (1000) = 9,965
+      - 1500 * log<sub>2</sub> (1500) = 15,826
+      - 2000 * log<sub>2</sub> (2000) = 21,931
+    - Calculating RAM for N*logN
+      - If 125,000 = 1gb then 125,000 / 1,000 = 125 = 1mb
+      - 4,482 / 125 = 36mb
+      - 9,965 / 125 = 80mb
+      - 15,826 / 125 = 126mb
+      - 21,931 / 125 = 175mb
+
+</details>
+
+As we can see, by knowing we have a quadradic complexity O(n<sup>2</sup>), it's easy to predict that scaling RAM in our problem is not a permanent solution. On the other hand, reducing the system complexity to O(n*log n) would have a HUGE impact on scaling our system.
+
+With the same 8gb RAM we needed for 1k users, we could support over 100k users and still have 8gb RAM free with no extra cost. To support the same amount of users just by scaling RAM, we would need 80,000 gb RAM! Can you pay for that?
+
+## Warming Up
 
 Now that we understand the importance of knowing the Big O notation, let's break it down so we can learn how to thinkin in its abstract way, evaluate an algorithm and identify its complexity.
 
