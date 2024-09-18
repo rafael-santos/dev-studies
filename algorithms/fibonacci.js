@@ -2,8 +2,8 @@
  * Fibonacci value of index
  *
  * Given a index N return the index value of the Fibonacci sequence, where the sequence is:
- * F0	F1	F2	F3	F4	F5	F6	F7	F8	F9	F10	F11	F12	FN
- * 0	1	  1	  2	  3	  5	  8	  13	21	34	55	89	144	X
+ * F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 FN
+ * 0  1  1  2  3  5  8  13 21 34 55  89  144 X
 --------------------------------------------------------------------------------------------*/
 
 // Fibonacci value using while loop
