@@ -96,6 +96,7 @@ The table bellow illustrates the difference in aproaching the problem by solving
 |              1,500 |                16gb               |    |                 126mb                |
 |              2,000 |                32gb               |    |                 175mb                |
 </p>
+
 <details>
   <summary>See table calculations</summary>
 
@@ -132,33 +133,116 @@ As we can see, by knowing we have a quadradic complexity O(n<sup>2</sup>), it's 
 
 With the same 8gb RAM we needed for 1k users, we could support over 100k users and still have 8gb RAM free with no extra cost. To support the same amount of users just by scaling RAM, we would need 80,000 gb RAM! Can you pay for that?
 
-## Warming Up
+# Warming Up
 
 Now that we understand the importance of knowing the Big O notation, let's break it down so we can learn how to thinkin in its abstract way, evaluate an algorithm and identify its complexity.
 
 ### Basic concept
 
-### How to analyse complexity
+The Big O notation comes from something called Asymptotic analysis, a method used in math to describe limiting behavior. In algorithm, we can say it describes the algorithm's behavior -- how it slows down -- as the input size approaches infinity, or very, very large numbers.
+
+We usually don't have infinite input sizes in our code, so it's common to read the Big O notation as considering the worst scenarios: the top limit execution time, or the maximum number of operations executed, or the maximum memory allocation, etc.
+
+The **"O"** represents this **"worst scenerio"** consideration, and the **"n"** represents the **input size**, the amount of data the algorithm has to processe.
+
+This way, we could read the notation **O(n<sup>2</sup>)** as:
+
+- O -> Considering the worst case possible
+- n<sup>2</sup> -> The algorithm complexity is equals to the **input size squared**.
+
+Take a look at this two pseudo codes below and its complexities. Note that in O(n), <b>"n" is a variable like any other</b>, and can have other names, but always represent some input in the algorithm.
+
+<table>
+  <thead>
+    <tr>
+      <th>O(1) - Constant complexity</th>
+      <th></th>
+      <th>O(n) - Linear complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<pre lang="js">
+sum(a, b) {
+  var sum = 0;
+  sum = a + b;
+  return sum;
+}
+</pre>
+      </td>
+      <td></td>
+      <td>
+        <br/>
+<pre lang="js">
+sum(a, b) {
+  var sum = a;
+  for(i = 0; i < b; i ++)
+    sum = sum + 1;
+  return sum;
+}
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>
+          In the worst case, the number of operations are <b>constant for any size of b:</b>
+            <ul>
+              <li>For b = 100 it will execute 3 operation;</li>
+              <li>For b = 1000 it will execute 3 operation;</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td></td>
+      <td>
+        <ul>
+          <li>
+          In the worst case, the number of operations <b>grow equivalent to any size of b:</b>
+            <ul>
+              <li>For b = 100 it will execute 102 operation;</li>
+              <li>For b = 1000 it will execute 1002 operation;</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## How to analyse complexity
+
+Ordem de grandeza
+
+x = n^2;
+x = 990n^2;
+x = n^2 + 54n + 13;
+
+polinômio de maior grau
+considera apenas as maiores ordens de grandeza
+considera sempre o pior cenário, o que seria o mais custoso
 
 ### 1. Focar nos loops do algoritmo
 ### 2. Verifique a complexidade das funções e métodos utilizados da linguagem
 ### 3. Foque no termo de maior grau, ignorando constantes e termos menores
 
-## Big O Complexities
+# Big O Complexities
 
-### O(1) - Constant complexity
+## O(1) - Constant complexity
 
-### O(log n) - Logarithmic complexity
+## O(log n) - Logarithmic complexity
 
-### O(n) - Linear complexity
+## O(n) - Linear complexity
 
-### O(n log n) - Log Linear complexity
+## O(n log n) - Log Linear complexity
 
-### O(n<sup>2</sup>) - Quadratic complexity
+## O(n<sup>2</sup>) - Quadratic complexity
 
-### O(2<sup>n</sup>) - Exponential complexity
+## O(2<sup>n</sup>) - Exponential complexity
 
-### O(n!) - Factorial complexity
+## O(n!) - Factorial complexity
 
 
 # References
