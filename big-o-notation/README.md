@@ -137,20 +137,20 @@ With the same 8gb RAM we needed for 1k users, we could support over 100k users a
 
 Now that we understand the importance of knowing the Big O notation, let's break it down so we can learn how to thinkin in its abstract way, evaluate an algorithm and identify its complexity.
 
-### Basic concept
+## Basic concept
 
 The Big O notation comes from something called Asymptotic analysis, a method used in math to describe limiting behavior. In algorithm, we can say it describes the algorithm's behavior -- how it slows down -- as the input size approaches infinity, or very, very large numbers.
 
 We usually don't have infinite input sizes in our code, so it's common to read the Big O notation as considering the worst scenarios: the top limit execution time, or the maximum number of operations executed, or the maximum memory allocation, etc.
 
-The **"O"** represents this **"worst scenerio"** consideration, and the **"n"** represents the **input size**, the amount of data the algorithm has to processe.
+The **"O"** represents this **"worst scenerio"** consideration, and the **"n"** represents the **input size**, the amount of data the algorithm has to process.
 
 This way, we could read the notation **O(n<sup>2</sup>)** as:
 
-- O -> Considering the worst case possible
-- n<sup>2</sup> -> The algorithm complexity is equals to the **input size squared**.
+- **O** -> Considering the worst case possible
+- **n<sup>2</sup>** -> The algorithm complexity is equals to the **input size squared**.
 
-Take a look at this two pseudo codes below and its complexities. Note that in O(n), <b>"n" is a variable like any other</b>, and can have other names, but always represent some input in the algorithm.
+Take a look at this two pseudo codes below and its complexities. Note that in O(n), **`n` is a variable like any other**, and can have other names, but always represent some input in the algorithm.
 
 <table>
   <thead>
